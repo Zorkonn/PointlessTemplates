@@ -360,27 +360,137 @@ template {
   display: none; }
 
 /*Colors*/
+.message-group {
+  margin: 0 20px 0 6px;
+  padding: 20px 0;
+  font-size: 1em;
+  display: flex;
+  user-select: text;
+  word-wrap: break-word; }
+
+.timestamp {
+  margin-left: 6px;
+  color: #fff;
+  opacity: 0.2;
+  font-size: 12px; }
+
+.avatar-large {
+  margin-right: 20px;
+  margin-top: -2px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  background-clip: padding-box; }
+
+.markup {
+  margin: 6px 0 0 0;
+  font-size: 15px;
+  line-height: 16.5px;
+  color: #ffffff;
+  opacity: 0.7; }
+
+.nickname {
+  font-size: 1em;
+  line-height: 1em; }
+
+input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1em;
+  line-height: 1em;
+  color: #fff; }
+  input:focus {
+    outline: none; }
+
+a,
+abbr,
+acronym,
+address,
+applet,
+big,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+tt,
+ul,
+var {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
 body {
   background-color: #2C2F33; }
   body .container {
-    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
     max-width: 1200px;
     margin: auto;
-    background: lightgray;
+    background: #32363B;
     height: 100%;
     padding-top: 20px;
     padding-left: 40px;
     padding-right: 40px;
-    background-color: #2C2F33; }
+    background-color: #2C2F33;
+    user-select: none; }
     body .container .logo {
       width: 1200px;
       height: 200px;
-      margin-bottom: 100px; }
+      margin-bottom: 100px;
+      pointer-events: visible; }
     body .container .chat {
-      background-color: #7289DA;
-      height: 200px;
-      width: 1100px;
-      margin: auto; }
+      background-color: #36393E; }
   body .footer {
     position: absolute;
     right: 0;
