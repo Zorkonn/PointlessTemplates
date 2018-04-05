@@ -5,22 +5,81 @@
     <title>PointlessTemplates</title>
     <meta content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S"
+        crossorigin="anonymous">
 </head>
 
-<body style="overflow: hidden">
+<body style="overflow:auto">
 
     <div class="container">
-        <img src="/img/logo.svg" alt="LOGO" class="logo">
+        <img src="img/Logo.svg" alt="LOGO" class="logo">
         <div class="chat">
             <div class="message-group hide-overflow">
                 <div class="avatar-large" style="background-image: url(img/example.svg)">
                 </div>
                 <div class="comment">
-                    <div class="message first ">
+                    <div class="message first">
                         <div class="body">
-                            <h2 class="nickname "><span class="username-wrapper "><strong class="user-name " style="color: #fff; ">User Name</strong></span><span class="highlight-separator ">  </span><span class="timestamp ">Today at 12:00 AM</span></h2>
-                            <div class="message-text ">
-                                <div class="markup ">Example Text</div>
+                        </div>
+                        <h2 class="nickname">
+                            <span class="username-wrapper">
+                                <strong class="user-name">
+                                    <input id="inpt_name" placeholder="Nick-Name" type="text">
+                                    <i id="btn_name" onclick="magic(name)" class="fas fa-check-square"></i>
+                                    <span id="txt_name"></span>
+                                </strong>
+                            </span>
+                            <span class="highlight-separator">
+                            </span>
+                            <span class="timestamp">
+                                <!--<button id="date_btn" class="timestamp-selector">DATE</button>
+                                <button id="time_btn" class="timestamp-selector">TIME</button>
+                                -->
+                                <!--<select name="">
+                                    <option value="">Today</option>
+                                    <option value="">Yesterday</option>
+                                </select>-->
+                                <select id="inpt_day">
+                                    <option>Today</option>
+                                    <option>Yesterday</option>
+                                    <option></option>
+                                    <option>Monday</option>
+                                    <option>Tuesday</option>
+                                    <option>Wednesday</option>
+                                    <option>Thursday</option>
+                                    <option>Friday</option>
+                                    <option>Saturday</option>
+                                    <option>Sunday </option>
+                                    <option></option>
+                                    <option>Last Monday</option>
+                                    <option>Last Tuesday</option>
+                                    <option>Last Wednesday</option>
+                                    <option>Last Thursday</option>
+                                    <option>Last Friday</option>
+                                    <option>Last Saturday</option>
+                                    <option>Last Sunday </option>
+                                </select>
+                                <i id="btn_day" onclick="magic(day)" class="fas fa-check-square"></i>
+                                <span id="txt_day"></span>
+                                at
+                                <input id="inpt_clock" type="number" placeholder="00:00" maxlength="4">
+                                <i id="btn_clock" onclick="magic(clock)" class="fas fa-check-square"></i>
+                                <span id="txt_clock">00:00</span>
+                                <span id="txt_peroid"></span>
+                                <select id="inpt_peroid">
+                                    <option value="PM">PM</option>
+                                    <option value="AM">AM</option>
+                                </select>
+                                <i id="btn_peroid" onclick="magic(peroid)" class="fas fa-check-square"></i>
+                            </span>
+                        </h2>
+                        <div class="message-text ">
+                            <div class="markup">
+                                <span id="txt_chat" style="display:none;">a</span>
+                                <input id="inpt_chat" type="text" placeholder="Example Text">
+                                <i id="btn_chat" onclick="magic(chat)" class="fas fa-check-square"></i>
+
                             </div>
                         </div>
                     </div>
@@ -28,6 +87,8 @@
             </div>
         </div>
     </div>
+    <br>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
