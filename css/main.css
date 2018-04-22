@@ -375,7 +375,12 @@ template {
   height: 40px;
   width: 40px;
   position: relative;
+<<<<<<< HEAD
   float: left; }
+=======
+  float: left;
+  background-image: url("/img/example.svg"); }
+>>>>>>> 80ebdfb0238675dbe8400230559117c4f091766e
   #avatar:hover {
     -webkit-filter: grayscale(1);
     filter: grayscale(1); }

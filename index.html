@@ -6,21 +6,25 @@
     <meta content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="shortcut icon" href="img\favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S"
-        crossorigin="anonymous">
-</head> 
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+</head>
 <body style="overflow:auto;">
 
     <div class="container">
         <img src="img/Logo.svg" alt="LOGO" class="logo">
         <div class="body">
             <div class="message-group">
-                <label  for="file_input">
-<!--                     <div tyle="background-image: url(img/example.svg)" id="avatar"></div>
- -->                    <img id="avatar" src="img/example.svg" alt="PHOTO">
+                <label for="file_input">
+                    <img id="avatar" src="img/example.svg" alt="PHOTO">
                 </label>
-                <input  onchange="show_img()" id="file_input" type="file">
+                <input onchange="show_img()" id="file_input" type="file">
+                <label for="file_input">
+                    <div id="avatar"></div>
+                </label>
+                <input id="file_input" type="file" accept="*.png , *.jpg , *.gif , *.svg">
+
                 <div class="message">
                     <h2 class="header">
                         <span class="username-wrapper">
@@ -85,7 +89,9 @@
                     </div>
                 </div>
             </div>
+
         </div>
+        <br>
     </div>
 
     <script src="js/main.js"></script>

@@ -45,9 +45,9 @@ function show_img() {
         avatar.src = "/img/example.svg";
     }
 }
-
 show_img();
 /* Resmi Göster */
+
 
 
 /* MAGIC Fonksiyonu */
@@ -70,5 +70,7 @@ function magic(array) {
 
     /* Text i inline olacak şekilde göster */
     array.txt.style.display = "inline";
-
 }
+
+show_img();
+/* Resmi Göster */
