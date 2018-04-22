@@ -72,5 +72,4 @@ function magic(array) {
     array.txt.style.display = "inline";
 }
 
-show_img();
 /* Resmi Göster */

@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
 </head>
+
 <body style="overflow:auto;">
 
     <div class="container">
@@ -19,19 +20,13 @@
                 <label for="file_input">
                     <img id="avatar" src="img/example.svg" alt="PHOTO">
                 </label>
-                <input onchange="show_img()" id="file_input" type="file">
-                <label for="file_input">
-                    <div id="avatar"></div>
-                </label>
-                <input id="file_input" type="file" accept="*.png , *.jpg , *.gif , *.svg">
-
+                <input onchange="show_img()" id="file_input" type="file" accept="*.png , *.jpg , *.gif , *.svg">
                 <div class="message">
                     <h2 class="header">
                         <span class="username-wrapper">
                             <strong class="user-name">
                                 <span id="txt_name" style="display:none;"></span>
                                 <input id="inpt_name" type="text" placeholder="Nick-Name">
-                                <i id="btn_name" onclick="magic(name)" class="fas fa-check-square"></i>
                             </strong>
                         </span>
                         <span class="timestamp">
@@ -57,13 +52,11 @@
                                     <option value="Last Saturday">Last Saturday</option>
                                     <option value="Last Sunday">Last Sunday</option>
                                 </select>
-                                <i id="btn_day" onclick="magic(day)" class="fas fa-check-square"></i>
                                 <span id="txt_day"></span>
                             </span>
                             <span>at</span>
                             <span class="clock">
                                 <input id="inpt_clock" type="time" placeholder="00:00" max="5">
-                                <i id="btn_clock" onclick="magic(clock)" class="fas fa-check-square"></i>
                                 </input>
 
                                 <span id="txt_clock"></span>
@@ -74,7 +67,6 @@
                                         <option value="PM">PM</option>
                                         <option value="AM">AM</option>
                                     </select>
-                                    <i id="btn_peroid" onclick="magic(peroid)" class="fas fa-check-square"></i>
                                 </span>
                             </span>
                     </h2>
@@ -83,15 +75,50 @@
                             <span class="chat">
                                 <span id="txt_chat" style="display:none;"></span>
                                 <input id="inpt_chat" type="text" placeholder="Your Message" required>
-                                <i id="btn_chat" onclick="magic(chat)" class="fas fa-check-square"></i>
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
         <br>
+        <div class="body">
+            <div class="message-group">
+                <img id="avatar" src="img/example.svg" alt="PHOTO">
+                <div class="message">
+                    <h2 class="header">
+                        <span class="username-wrapper">
+                            <strong class="user-name">
+                                <span id="txt_name_clone">Blank</span>
+                            </strong>
+                        </span>
+                        <span class="timestamp">
+                            <span class="day">
+                                <span id="txt_day_clone">Date</span>
+                            </span>
+                            <span>at</span>
+                            <span class="clock">
+                                <span id="txt_clock_clone">00:00</span>
+                            </span>
+                            <span class="peroid">
+                                <span id="txt_peroid_clone">
+                                    PM
+                                </span>
+                            </span>
+                        </span>
+                    </h2>
+                    <div class="message-text">
+                        <div class="markup">
+                            <span class="chat">
+                                <span id="txt_chat_clone">BLANK</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
     </div>
 
     <script src="js/main.js"></script>
