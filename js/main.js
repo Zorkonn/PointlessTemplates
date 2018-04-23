@@ -42,7 +42,7 @@ function show_img() {
     if (file) {
         f_reader.readAsDataURL(file);
     } else {
-        avatar.src = "/img/example.png";
+        avatar.src = "img/example.png";
     }
 }
 show_img();
