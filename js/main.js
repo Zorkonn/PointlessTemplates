@@ -32,13 +32,13 @@ var chat = {
      
 function show_img() {
     var avatar = document.querySelector('#avatar');
+    var avatar_clone = document.getElementById("avatar_clone")
     var file = document.querySelector('input[type=file]').files[0];
     var f_reader = new FileReader();
 
     f_reader.onloadend = function () {
-        avatar.src = f_reader.result;
-    }
-
+        avatar.src = avatar_clone.src = f_reader.result  ;
+    } 
     if (file) {
         f_reader.readAsDataURL(file);
     } else {
@@ -47,6 +47,10 @@ function show_img() {
 }
 show_img();
 /* Resmi Göster */
+
+function synchronize(array) {
+    array.txt.innerHTML = array.inpt.value;
+}
 
 
 

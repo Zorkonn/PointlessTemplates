@@ -11,8 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
 </head>
 
-<body style="overflow:auto;">
-
+<body>
     <div class="container">
         <img src="img/Logo.svg" alt="LOGO" class="logo">
         <div class="body">
@@ -24,26 +23,23 @@
                 <div class="message">
                     <h2 class="header">
                         <span class="username-wrapper">
-                            <strong class="user-name">
-                                <span id="txt_name" style="display:none;"></span>
-                                <input id="inpt_name" type="text" placeholder="Nick-Name">
-                            </strong>
+                            <input id="inpt_name" onchange="synchronize(name)" type="text" placeholder="Nick-Name">
                         </span>
                         <span class="timestamp">
                             <span class="day">
-                                <select id="inpt_day" onchange="stretch_text(input)">
-                                    <option value="" disabled selected hidden>Date</option>
+                                <select id="inpt_day" onchange="synchronize(day)">
+                                    <option value="none" disabled selected hidden>Date</option>
                                     <option value="Today">Today</option>
                                     <option value="Yesterday">Yesterday</option>
                                     <option disabled></option>
-                                    <option value="">Monday</option>
+                                    <option value="Monday">Monday</option>
                                     <option value="Tuesday">Tuesday</option>
                                     <option value="Wednesday">Wednesday</option>
                                     <option value="Thursday">Thursday</option>
                                     <option value="Friday">Friday</option>
                                     <option value="Saturday">Saturday</option>
                                     <option value="Sunday">Sunday </option>
-                                    <option value="" disabled></option>
+                                    <option value="none" disabled></option>
                                     <option value="Last Monday">Last Monday</option>
                                     <option value="Last Tuesday">Last Tuesday</option>
                                     <option value="Last Wednesday">Last Wednesday</option>
@@ -52,29 +48,25 @@
                                     <option value="Last Saturday">Last Saturday</option>
                                     <option value="Last Sunday">Last Sunday</option>
                                 </select>
-                                <span id="txt_day"></span>
                             </span>
-                            <span>at</span>
+                            <span> at </span>
                             <span class="clock">
-                                <input id="inpt_clock" type="time" placeholder="00:00" max="5">
+                                <input onchange="synchronize(clock)" id="inpt_clock" type="time" placeholder="00:00" max="5">
                                 </input>
 
-                                <span id="txt_clock"></span>
                             </span>
                             <span class="peroid">
-                                <span id="txt_peroid">
-                                    <select id="inpt_peroid" style="color:#757575;">
-                                        <option value="PM">PM</option>
-                                        <option value="AM">AM</option>
-                                    </select>
-                                </span>
+<select onchange="synchronize(peroid)" id="inpt_peroid" style="color:#757575;">
+                                    <option value="PM">PM</option>
+                                    <option value="AM">AM</option>
+                                </select>
                             </span>
+                        </span>
                     </h2>
                     <div class="message-text">
                         <div class="markup">
                             <span class="chat">
-                                <span id="txt_chat" style="display:none;"></span>
-                                <input id="inpt_chat" type="text" placeholder="Your Message" required>
+                                <input onchange="synchronize(chat)" id="inpt_chat" type="text " placeholder="Your Message ">
                             </span>
                         </div>
                     </div>
@@ -82,35 +74,31 @@
             </div>
         </div>
         <br>
-        <div class="body">
+        <div class="body clone">
             <div class="message-group">
-                <img id="avatar" src="img/example.svg" alt="PHOTO">
+                <img id="avatar_clone" src="img/example.svg" alt="PHOTO">
                 <div class="message">
                     <h2 class="header">
                         <span class="username-wrapper">
-                            <strong class="user-name">
-                                <span id="txt_name_clone">Blank</span>
+                            <strong id="txt_name" class="user-name">
+                                Zorkon
                             </strong>
                         </span>
                         <span class="timestamp">
-                            <span class="day">
-                                <span id="txt_day_clone">Date</span>
-                            </span>
+                            <span id="txt_day">Date</span>
                             <span>at</span>
-                            <span class="clock">
-                                <span id="txt_clock_clone">00:00</span>
+                            <span id="txt_clock">
+                                00:00
                             </span>
-                            <span class="peroid">
-                                <span id="txt_peroid_clone">
-                                    PM
-                                </span>
+                            <span id="txt_peroid">
+                                PM
                             </span>
                         </span>
                     </h2>
                     <div class="message-text">
                         <div class="markup">
-                            <span class="chat">
-                                <span id="txt_chat_clone">BLANK</span>
+                            <span id="txt_chat">
+                                BLANK
                             </span>
                         </div>
                     </div>
@@ -118,9 +106,11 @@
             </div>
         </div>
         <br>
-    </div>
+        <a href="javascript:genScreenshot()"> Get Screenshot</a>
+        <a id="test"></a>
     </div>
 
+    <script src="js/canvas.js"></script>
     <script src="js/main.js"></script>
 </body>
 
