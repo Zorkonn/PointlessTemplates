@@ -1,5 +1,5 @@
 /* TANIM */
-var name = {
+var username = {
     btn: document.getElementById('btn_name'),
     inpt: document.getElementById('inpt_name'),
     txt: document.getElementById('txt_name'),
